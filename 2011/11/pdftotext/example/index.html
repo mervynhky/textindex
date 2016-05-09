@@ -1,0 +1,310 @@
+<html>
+<meta charset="UTF-8">
+<head>
+    <link rel="stylesheet" href="../annotator.css">
+    <link rel="stylesheet" href="../jquery-ui.css">
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow-y: hidden;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font: 13px Helvetica, sans-serif;
+        }
+
+        body > div {
+            width: 48%;
+            height: 100%;
+            overflow-y: auto;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        #output {
+            visibility: hidden;
+            font-family: "Franklin Gothic Heavy";
+            font-size: 16px;
+            text-align: justify;
+            padding: 20px;
+            box-shadow: 0 0 5px #777;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        #processor {
+            height: 70px;
+        }
+
+        .button {
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px #777;
+            margin-top: 15px;
+            /*z-index: 99999;*/
+        }
+
+        #inputstuff {
+            position: absolute;
+            /*background-color: transparent;*/
+            /*border-bottom: 10px none;*/
+            /*box-shadow: 0 4px 2px -2px #777;*/
+            height: 90%;
+            text-align: center;
+            width: 50%;
+            /*overflow:auto;*/
+        }
+
+        #copiedtext {
+            margin: 10px;
+            margin-top: 65px;
+            text-align: justify;
+            font-family: 'Century Gothic';
+            font-size: 16px;
+        }
+
+        .annotator-notice {
+            width: 0px !important;
+        }
+
+        .ui-autocomplete-input {
+            z-index: 9999999 !important;
+        }
+
+    </style>
+</head>
+<!--ondblclick="annotate(getPosition())"-->
+<body>
+<div style="overflow-y: hidden!important;">
+    <div id="inputstuff">
+        <p>Current Connectivity: <span id="status"></span></p>
+        <!--<input class="button" type="button" onclick="highlightSelection()" value="Highlight with div">-->
+        <!--<input class="button" type="button" onclick="surroundSelection()" value="Highlight with span">-->
+        <input class="button" type="button" onclick="getPosition()" value="Get position">
+        <!--<input class="button" type="button" onclick="annotate()" value="Annotate">-->
+        <input class="button" type="button" onclick="copyText()" value="Show Text">
+        <input class="button" type="button" onclick="retrieveTag()" value="Retrieve Tag">
+        <!--<input class="button" type="button" onclick="drawStorage()" value="Get Stored">-->
+
+        <div id="copiedtext">
+            1. This video will be on food pyramid 2. A food pyramid is a pyramid shaped diagram representing the optimal
+            number of servings to be eaten each day from each of the basic food groups. 3. I have selected this topic
+            because it carries the importance of guiding the public on how to eat healthily and also stay healthy.
+            Furthermore, the food pyramid provides a healthy range of nutrients that are required for the daily needs of
+            a normal person. 4. A standard food pyramid has 4 levels starting with the base. The base consists of
+            grains such as rice, cereal, pasta, noodles etc This level provides carbohydrates as a source of energy for
+            the human body. 5. The 2 nd level consists of wide variety of fruits & vegetables. Food in this level
+            provide
+            vitamins & minerals for growth and build a stronger immunity to diseases within the human body 6. The 3 rd
+            level consists of poultry , beans & dairy products. These provide protein, calcium, iron and zinc for
+            building and repairing tissue 7. Lastly, the tip consists of fats & oil and to be consumed in small amount.
+            As we all know, consuming a lot of these leads to health problems and diseases. 8. Conclusion: eating habits
+            plays an important role in our everyday life. It help provides us a balance diet and k eep us healthy for a
+            longer period of time . 9. YES, my findings on this topic is successful because this gives me a clearer
+            vision on what a food pyramid looks like 10. Throughout the research conducted to present this topic, I am
+            confident to say that I am well informed on healthy foods . Presently, I am able to differentiate what is
+            healthy & unhealthy food and to consume them in a moderate amount or servings. Given more opportunity and
+            time, I would gladly provide more examples of food while providing an explanation of the nutrition it
+            carries.
+        </div>
+    </div>
+    <!-- embed the pdftotext web app as an iframe visibility:hidden; display:none;-->
+    <iframe id="processor" src="../"
+            style="position: absolute; pointer-events: none; overflow: hidden; visibility:hidden; width:1px; height:1px;"></iframe>
+
+    <!-- a container for the output -->
+    <div id="output" style="margin-top: 2600px;">
+        super nugget
+    </div>
+</div>
+
+<div>
+    <button style="margin-left:150px; margin-top:60px;" id="clear-storage">Clear LocalStorage</button>
+    <div id="thelabels" style="margin-left:50px; margin-top:35px;"> The Labels:
+        <div id="labelstuff" style="font-family:sans-serif; font-size: 12px;">
+        </div>
+    </div>
+    <!-- the PDF file must be on the same domain as this page -->
+    <iframe id="input" src="foodpyramid.pdf" style="visibility:hidden; width:1px; height:1px;"></iframe>
+</div>
+<script src="../jQuery-1.7.js"></script>
+<script src="../jquery-ui.js"></script>
+<script src="http://assets.annotateit.org/annotator/v1.2.5/annotator-full.min.js"></script>
+<script type="text/javascript">
+
+    function highlightSelection() {
+        var userSelection = window.getSelection().getRangeAt(0);
+        highlightRange(userSelection);
+    }
+
+    function highlightRange(range) {
+        var newNode = document.createElement("div");
+        newNode.setAttribute(
+                "style",
+                "background-color: yellow; display: inline;"
+        );
+        range.surroundContents(newNode);
+    }
+
+    function surroundSelection() {
+        var span = document.createElement("span");
+        span.id = "marker";
+        span.style.fontWeight = "bold";
+        span.style.color = "green";
+        span.style.backgroundColor = "yellow";
+        if (window.getSelection) {
+            var sel = window.getSelection();
+            if (sel.rangeCount) {
+                var range = sel.getRangeAt(0).cloneRange();
+                range.surroundContents(span);
+                sel.removeAllRanges();
+                sel.addRange(range);
+            }
+        }
+    }
+
+    function getCharOffsetRelativeTo(container, node, offset) {
+        var range = document.createRange();
+        range.selectNodeContents(container);
+        range.setEnd(node, offset);
+        return range.toString().length;
+    }
+
+    function copyText() {
+        var outputbox = document.getElementById("output");
+        var newbox = document.getElementById("copiedtext");
+        outputbox.innerHTML = newbox.innerHTML = outputbox.innerHTML;
+    }
+
+    function getPosition() {
+        var sel = window.getSelection();
+        var pre = document.getElementById("copiedtext");
+        var offset = getCharOffsetRelativeTo(pre, sel.anchorNode, sel.anchorOffset);
+        console.log("Offset is: " + offset);
+        var text = "";
+        if (typeof window.getSelection != "undefined") {
+            if (sel.rangeCount) {
+                text = sel.toString();
+            }
+        } else if (typeof document.selection != "undefined" &&
+                document.selection.type != "Control") {
+            var textRange = document.selection.createRange();
+            text = textRange.text;
+        }
+        annotate(offset, text);
+    }
+
+    function annotate(offset, text) {
+        jQuery(function ($) {
+            $('#copiedtext').annotator().annotator('addPlugin', 'Tags');
+            var availableTags = [offset.toString(),];
+            $('#copiedtext').data('annotator').plugins.Tags.input.autocomplete({
+                source: availableTags
+            });
+        });
+        var labelbox = document.getElementById("labelstuff");
+        labelbox.innerHTML = labelbox.innerHTML + "<br/> WORD: " + text + "<br/> OFFSET IS: " + offset.toString() + "<br/>";
+    }
+
+    function retrieveTag() {
+        var highlighted = window.getSelection();
+        var tagged = document.getElementsByClassName("annotator-tags");
+        var text = "";
+        for (var b = 0; b < tagged.length; b++) {
+            var tagText = tagged[b].innerText;
+        }
+        if (typeof window.getSelection != "undefined") {
+            if (highlighted.rangeCount) {
+                text = highlighted.toString();
+            }
+        } else if (typeof document.selection != "undefined" &&
+                document.selection.type != "Control") {
+            var textRange = document.selection.createRange();
+            text = textRange.text;
+        }
+        var labelbox = document.getElementById("labelstuff");
+        labelbox.innerHTML = labelbox.innerHTML + "<br/> WORD: " + text + " <br/> TAGGED WITH: " + tagText + "<br/>";
+    }
+
+    //    function drawStorage() {
+    //        var myObj
+    //        for (var dataObj  in localStorage) {
+    //             myObj = localStorage[dataObj];
+    //            console.log(myObj.toString());
+    //        }
+    //    }
+
+</script>
+<script src="vendor/coffeescript.js"></script>
+<script type="text/coffeescript">
+
+    window.onerror = (msg, file, line) ->
+        alert(msg + ' ' + file + ' ' + line)
+
+    jQuery.ajaxSetup async: false
+
+    modules = jQuery.trim """
+    offline offline/store
+    """
+    modules = modules.split(/\s+/)
+
+    run = (file, source) ->
+        filename = file.replace /coffee$/, "js"
+        compiled = "#{CoffeeScript.compile(source)}\n//@ sourceURL=#{filename}"
+        eval(compiled)
+
+    sources = ("./src/#{script}.coffee" for script in modules)
+    requests = jQuery.map sources, (script) ->
+        jQuery.get script, jQuery.proxy(run, this, script)
+
+    jQuery.when.apply(jQuery, requests).done ->
+        content = jQuery("#copiedtext").annotator()
+        content.annotator 'addPlugin', 'Offline',
+            online: -> jQuery("#status").text("Online")
+            offline: -> jQuery("#status").text("Offline")
+
+        window.annotator = content.data('annotator')
+
+    jQuery("#clear-storage").click ->
+        window.annotator.plugins.Offline.store.clear() if window.annotator
+</script>
+<script>
+
+    var input = document.getElementById("input");
+    var processor = document.getElementById("processor");
+    var output = document.getElementById("output");
+
+    window.addEventListener("message", function (event) {
+        if (event.source != processor.contentWindow) return;
+
+        switch (event.data) {
+            case "ready":
+                var xhr = new XMLHttpRequest;
+                xhr.open('GET', input.getAttribute("src"), true);
+                xhr.responseType = "arraybuffer";
+
+                xhr.onload = function (event) {
+                    processor.contentWindow.postMessage(this.response, "*");
+                };
+
+                xhr.send();
+                break;
+
+            default:
+                output.textContent = event.data.replace(/\s+/g, " ");
+                break;
+        }
+    }, true);
+</script>
+</body>
+</html>
