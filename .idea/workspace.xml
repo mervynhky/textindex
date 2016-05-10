@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="40959c2b-3799-42ab-9401-5e8c64f7c241" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2011/11/pdftotext/annotator-full.min.js" afterPath="$PROJECT_DIR$/2011/11/pdftotext/annotator-full.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2011/11/pdftotext/example/index.html" afterPath="$PROJECT_DIR$/2011/11/pdftotext/example/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2011/11/pdftotext/jQuery-1.7.js" afterPath="$PROJECT_DIR$/2011/11/pdftotext/jQuery-1.7.js" />
     </list>
     <ignored path="PDFtoText.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,8 +27,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/2011/11/pdftotext/example/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.76198345">
-              <caret line="295" column="27" selection-start-line="295" selection-start-column="27" selection-end-line="295" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.60841423">
+              <caret line="280" column="7" selection-start-line="280" selection-start-column="7" selection-end-line="280" selection-end-column="7" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#iframe#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -48,7 +45,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2011/11/pdftotext/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.4285715">
+            <state vertical-scroll-proportion="0.0">
               <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
@@ -58,7 +55,7 @@
       <file leaf-file-name="pdf.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2011/11/pdftotext/pdf.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.433332">
+            <state vertical-scroll-proportion="0.0">
               <caret line="504" column="0" selection-start-line="504" selection-start-column="0" selection-end-line="504" selection-end-column="0" />
               <folding />
             </state>
@@ -68,7 +65,7 @@
       <file leaf-file-name="annotator-full.min.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2011/11/pdftotext/annotator-full.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.483871">
+            <state vertical-scroll-proportion="0.0">
               <caret line="993" column="34" selection-start-line="993" selection-start-column="34" selection-end-line="993" selection-end-column="34" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -131,9 +128,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="2177" />
-    <option name="width" value="1109" />
-    <option name="height" value="1040" />
+    <option name="x" value="1358" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -160,8 +158,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -182,7 +178,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -669,12 +667,13 @@
       <workItem from="1462498041675" duration="18521000" />
       <workItem from="1462526831448" duration="1063000" />
       <workItem from="1462758820452" duration="22586000" />
-      <workItem from="1462844908052" duration="11066000" />
+      <workItem from="1462844908052" duration="11399000" />
+      <workItem from="1462861265076" duration="48000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134362000" />
+    <option name="totallyTimeSpent" value="134743000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -686,27 +685,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2177" y="0" width="1109" height="1040" extended-state="0" />
-    <editor active="true" />
+    <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17864923" sideWeight="0.49786323" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23281597" sideWeight="0.51004785" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23202614" sideWeight="0.5122863" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23281597" sideWeight="0.48995215" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23202614" sideWeight="0.48771366" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33971292" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3392094" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1082,7 +1081,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1119,7 +1117,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/2011/11/pdftotext/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.4285715">
+        <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
@@ -1127,7 +1125,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/2011/11/pdftotext/pdf.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.433332">
+        <state vertical-scroll-proportion="0.0">
           <caret line="504" column="0" selection-start-line="504" selection-start-column="0" selection-end-line="504" selection-end-column="0" />
           <folding />
         </state>
@@ -1147,7 +1145,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/2011/11/pdftotext/annotator-full.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.483871">
+        <state vertical-scroll-proportion="0.0">
           <caret line="993" column="34" selection-start-line="993" selection-start-column="34" selection-end-line="993" selection-end-column="34" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -1157,8 +1155,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/2011/11/pdftotext/example/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76198345">
-          <caret line="295" column="27" selection-start-line="295" selection-start-column="27" selection-end-line="295" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.60841423">
+          <caret line="280" column="7" selection-start-line="280" selection-start-column="7" selection-end-line="280" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#iframe#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
