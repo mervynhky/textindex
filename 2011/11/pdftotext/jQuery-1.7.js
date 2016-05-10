@@ -14,6 +14,7 @@
  * Copyright 2011, The Dojo Foundation
  * Released under the MIT, BSD, and GPL Licenses.
  *
+ * This jquery was taken from pdftotext, differs from original jquery 1.7 by a few lines.
  * Date: Thu Nov 3 16:18:21 2011 -0400
  */
 (function( window, undefined ) {

@@ -65,7 +65,7 @@
             /*overflow:auto;*/
         }
 
-        #copiedtext {
+        #copiedText {
             margin: 10px;
             margin-top: 65px;
             text-align: justify;
@@ -90,15 +90,17 @@
         <p>Current Connectivity: <span id="status"></span></p>
         <!--<input class="button" type="button" onclick="highlightSelection()" value="Highlight with div">-->
         <!--<input class="button" type="button" onclick="surroundSelection()" value="Highlight with span">-->
-        <input class="button" type="button" onclick="getPosition()" value="Get position">
-        <input class="button" type="button" onclick="annotate()" value="Annotate">
         <input class="button" type="button" onclick="copyText()" value="Show Text">
+        <input class="button" type="button" onclick="getPosition()" value="Get position">
+        <!--<input class="button" type="button" onclick="annotate()" value="Annotate">-->
         <input class="button" type="button" onclick="retrieveTag()" value="Retrieve Tag">
+        <input class="button" type="button" onclick="startStore()" value="Annotate">
         <!--<input class="button" type="button" onclick="drawStorage()" value="Get Stored">-->
+        <input class="button" type="button" onclick="refresher()" value="Refresher Orb">
+        <!--<input class="button" type="button" onclick="testCopy()" value="Test Copy">-->
 
-        <div id="copiedtext">
-
-        </div>
+        <div id="copiedText"></div>
+        <div id="testdiv"></div>
     </div>
     <!-- embed the pdftotext web app as an iframe visibility:hidden; display:none;-->
     <iframe id="processor" src="../"
@@ -164,13 +166,37 @@
 
     function copyText() {
         var outputbox = document.getElementById("output");
-        var newbox = document.getElementById("copiedtext");
+        var newbox = document.getElementById("copiedText");
         outputbox.innerHTML = newbox.innerHTML = outputbox.innerHTML;
+    }
+    //    function testCopy() {
+    //        var outputText = document.getElementById("output");
+    //        var copiedText = document.getElementById("copiedText");
+    //        var outword = outputText.innerHTML
+    //        var word = copiedText.innerHTML;
+    //
+    //        copiedText.textContent = outword + outword;
+    //        var outputbox = document.getElementById("output");
+    //        var newbox = document.getElementById("copiedText");
+    //        outputbox.innerHTML = newbox.innerHTML = outputbox.innerHTML;
+    //    }
+    function refresher() {
+        var copiedText = document.getElementById("copiedText");
+        var annotator = new Annotator(copiedText)
+        annotator.destroy;
+        $('#copiedText').load(document.URL + ' #copiedText');
+        $('#status').load(document.URL + ' #status');
+        annotator.destroy;
+
+//        jQuery(function($){
+//            $('#copiedText').annotator('destroy');
+//        });
+        annotator.destroy;
     }
 
     function getPosition() {
         var sel = window.getSelection();
-        var pre = document.getElementById("copiedtext");
+        var pre = document.getElementById("copiedText");
         var offset = getCharOffsetRelativeTo(pre, sel.anchorNode, sel.anchorOffset);
         console.log("Offset is: " + offset);
         var text = "";
@@ -188,9 +214,9 @@
 
     function annotate(offset, text) {
         jQuery(function ($) {
-            $('#copiedtext').annotator().annotator('addPlugin', 'Tags');
+            $('#copiedText').annotator().annotator('addPlugin', 'Tags');
             var availableTags = [offset.toString(),];
-            $('#copiedtext').data('annotator').plugins.Tags.input.autocomplete({
+            $('#copiedText').data('annotator').plugins.Tags.input.autocomplete({
                 source: availableTags
             });
         });
@@ -225,44 +251,98 @@
     //            console.log(myObj.toString());
     //        }
     //    }
-//testing git repo
+    //testing git repo
     //push for new branch
+
+    /*
+    //Note: Try this later if all else fails.
+    //Port number changes often
+
+    content = $('#container').annotator();
+     content.annotator('addPlugin', 'Store', {
+
+     prefix: 'http://localhost:5000',
+     annotationData: {
+     'uri': document.URL
+     },
+     loadFromSearch: {
+     'limit':20,
+     'uri': 'http://localhost/index.html
+     }
+     });
+
+     var loadAnno = function(){
+     content.data('annotator').plugins['Store'].loadAnnotationsFromSearch({
+     limit: 20,
+     uri: document.URL
+     });
+     }
+
+     */
 </script>
 
 <!-- TODO: set the coffeescript to be toggled or delayed-->
 
 <script src="vendor/coffeescript.js"></script>
 <script type="text/coffeescript">
+#For this section, it is set to a trigger type
+#The next step is to trigger this to be on or off
+    root = exports ? this
+    root.startStore = () ->
+        wording = $("#copiedText")
+        destroyer = new Annotator(wording)
+        destroyer.destroy
+        wording = undefined
+        modules = undefined
+        requests = undefined
+        run = undefined
+        script = undefined
+        sources = undefined
 
-    window.onerror = (msg, file, line) ->
-        alert(msg + ' ' + file + ' ' + line)
+        window.onerror = (msg, file, line) ->
+            alert msg + ' ' + file + ' ' + line
 
-    jQuery.ajaxSetup async: false
+        jQuery.ajaxSetup async: false
+        modules = jQuery.trim('offline offline/store')
+        modules = modules.split(/\s+/)
 
-    modules = jQuery.trim """
-    offline offline/store
-    """
-    modules = modules.split(/\s+/)
+        run = (file, source) ->
+            compiled = undefined
+            filename = undefined
+            filename = file.replace(/coffee$/, 'js')
+            compiled = CoffeeScript.compile(source) + '\n//@ sourceURL=' + filename
+            eval compiled
 
-    run = (file, source) ->
-        filename = file.replace /coffee$/, "js"
-        compiled = "#{CoffeeScript.compile(source)}\n//@ sourceURL=#{filename}"
-        eval(compiled)
+        sources = do ->
+            i = undefined
+            len = undefined
+            results = undefined
+            results = []
+            i = 0
+            len = modules.length
+            while i < len
+                script = modules[i]
+                results.push './src/' + script + '.coffee'
+                i++
+            results
+        requests = jQuery.map(sources, (script) ->
+            jQuery.get script, jQuery.proxy(run, this, script)
+        )
+        jQuery.when.apply(jQuery, requests).done ->
+            content = undefined
+            content = jQuery('#copiedText').annotator()
+            content.annotator 'addPlugin', 'Offline',
+                online: ->
+                    jQuery('#status').text 'Online'
+                offline: ->
+                    jQuery('#status').text 'Offline'
+            window.annotator = content.data('annotator')
+        jQuery('#clear-storage').click ->
+            if window.annotator
+                return window.annotator.plugins.Offline.store.clear()
+            return
+        return
 
-    sources = ("./src/#{script}.coffee" for script in modules)
-    requests = jQuery.map sources, (script) ->
-        jQuery.get script, jQuery.proxy(run, this, script)
-
-    jQuery.when.apply(jQuery, requests).done ->
-        content = jQuery("#copiedtext").annotator()
-        content.annotator 'addPlugin', 'Offline',
-            online: -> jQuery("#status").text("Online")
-            offline: -> jQuery("#status").text("Offline")
-
-        window.annotator = content.data('annotator')
-
-    jQuery("#clear-storage").click ->
-        window.annotator.plugins.Offline.store.clear() if window.annotator
 </script>
 <script>
 
