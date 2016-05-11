@@ -643,7 +643,7 @@ var PDFJS = {};
                 page.pdf = this;
                 return (this.pageCache[n] = page);
             },
-
+//http://www.chineselyrics4u.com/2015/01/liang-ge-ren-de-hui-yi-yi-ge-ren-ren.html
             destroy: function pdfDocDestroy() {
                 if (this.worker)
                     this.worker.terminate();
