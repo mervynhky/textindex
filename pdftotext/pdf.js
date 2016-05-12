@@ -12433,7 +12433,8 @@ var FontLoader = {
         window.addEventListener(
           'message',
           function fontLoaderMessage(e) {
-            var fontNames = JSON.parse(e.data);
+            //i dont know what this does, its not being used. commenting out because it is throwing an error.
+            //var fontNames = JSON.parse(e.data);
             for (var i = 0, ii = objs.length; i < ii; ++i) {
               var font = objs[i];
               font.loading = false;
