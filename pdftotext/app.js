@@ -8,12 +8,24 @@ function App(){
     // render the first pages
     var pdf = new PDFJS.PDFDoc(data);
     var total = pdf.numPages;
+    var curPage = 1;
 
-    for (i = 1; i <= total; i++){
-      var page = pdf.getPage(i);
+    //if(prevPage){
+    //  if(curPage > 1){
+    //    curPage - 1;
+    //  }
+    //}
+    //if(nextPage){
+    //  if(curPage < total){
+    //    curPage + 1;
+    //  }
+    //}
+
+    //for (i = 1; i <= total; i++){
+      var page = pdf.getPage(curPage);
 
       var canvas = document.createElement('canvas');
-      canvas.id = 'page' + i;
+      canvas.id = 'page' + curPage;
       canvas.mozOpaque = true;
       div.appendChild(canvas);
 
@@ -33,7 +45,8 @@ function App(){
       document.body.appendChild(textLayer);
 
       page.startRendering(context, function(){
-        if (++self.complete == total){
+        //if (++self.complete == total){
+          if(++self.complete == curPage){
           self.setMessage("Finished rendering. Extracting text...");
 
           window.setTimeout(function(){
@@ -44,11 +57,11 @@ function App(){
             }
             self.sendOutput(layers.join("\n"));
 
-            self.setMessage("Done!");
+            self.setMessage("( ͡° ͜ʖ ͡°) Done!");
           }, 1000);
         }
       }, textLayer);
-    }
+    //}
   };
 
   this.receiveInput = function(event){

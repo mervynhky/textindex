@@ -48,24 +48,32 @@
     <iframe id="processor" src="../"></iframe>
 
     <!-- a container for the output -->
-    <button style="margin-left:50%; border-radius:10px;" onclick="bolter()"> ( ͡° ͜ʖ ͡°)</button>
+    <button style="margin-left:50%; border-radius:10px;" onclick="getIframe()"> (;´༎ຶД༎ຶ`)</button>
     <div id="output">
         <div id="intro"></div>
     </div>
 </div>
-
+<!--UP IS LEFT, DOWN IS RIGHT-->
 <div>
     <!-- the PDF file must be on the same domain as this page -->
     <iframe id="input" src="journal.pone.0026738.pdf"></iframe>
 </div>
 <!--<script src="../../2011/11/pdftotext/jQuery-1.7.js"></script>-->
 <script type="text/javascript">
-    function bolter() {
-        var bol = document.getElementById('input');
-        var boler = bol.contentWindow.document.getElementById('pageNumber');
-        alert("THIS BOL IS " + boler);
-//        var dol = $("#input").contents().find("pageNumber").html();
-//        alert("THIS DOL IS " + dol)
+    function getIframe() {
+        var iFrame = document.getElementById('input');
+        console.log("iFrame is: " + iFrame);
+        console.log("iFrame elementCN is: " + iFrame.textContent);
+        console.log("iFrame contentWindow is : " + iFrame.contentWindow.document);
+//        var iPageNum = iFrame.contentWindow.document.getElementById('pageNumber');
+//        alert("Current Page Number: " + iPageNum);
+
+        var iFrameJq = $("#input").contents().find("pageNumber").html();
+        console.log("iFrameJq is: " + iFrameJq);
+        console.log("iFrameJq contentWindow is : " + iFrameJq.contentWindow.document);
+//        alert("jQuery Page Number:  " + iFrameJq)
+
+
     }
 </script>
 <script>

@@ -13,14 +13,33 @@
 <div id="message">Loading...</div>
 <div id="viewer" style="display:none"></div>
 
-<button id="nextpg" onclick="nextPg();">Next</button>
-<button id="previousps" onclick="previousPg()">Previous</button>
+<button id="previousps" onclick="previousPg()">Previous Page </button>
+<button id="nextpg" onclick="nextPg();">Next Page</button>
 <script id="pdf-js" src="pdf.js"></script>
 <script>PDFJS.workerSrc = document.getElementById("pdf-js").getAttribute("src");</script>
 
 <script src="app.js"></script>
 <script>
     var app = new App;
+</script>
+<script>
+    function nextPg()
+    {
+        var value = parseInt(document.getElementById('pageNumber').value, 10);
+        value = isNaN(value) ? 0 : value;
+        value++;
+        return value;
+//        document.getElementById('pageNumber').value = value;
+    }
+    function previousPg()
+    {
+        var value = parseInt(document.getElementById('pageNumber').value, 10);
+        if(!value <= 0 ){
+            value--;
+        }
+        return value;
+//        document.getElementById('pageNumber').value = value;
+    }
 </script>
 </body>
 
