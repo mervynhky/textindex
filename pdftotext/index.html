@@ -7,38 +7,39 @@
     <style>.textLayer {
         display: none;
     }</style>
+    <script src="../2011/11/pdftotext/jQuery-1.7.js"></script>
 </head>
 
 <body style="font:13px Helvetica,sans-serif">
 <div id="message">Loading...</div>
 <div id="viewer" style="display:none"></div>
 
-<button id="previousPg" onclick="previousPg()">Previous Page </button>
+<button id="previousPg" onclick="previousPg()">Previous Page</button>
 <button id="nextPg" onclick="nextPg();">Next Page</button>
 <script id="pdf-js" src="pdf.js"></script>
 <script>PDFJS.workerSrc = document.getElementById("pdf-js").getAttribute("src");</script>
-
 <script src="app.js"></script>
 <script>
     var app = new App(1);
     var value = 1;
 
-    function nextPg()
-    {
+    function nextPg() {
+
         value = isNaN(value) ? 0 : value;
         value++;
         console.log("The value is " + value);
         app = new Apple(value);
     }
 
-    function previousPg()
-    {
-        if(!value <= 0 ){
+    function previousPg() {
+
+        if (!value <= 0) {
             value--;
         }
         console.log("The value is " + value);
         app = new Apple(value);
     }
+
 </script>
 </body>
 
