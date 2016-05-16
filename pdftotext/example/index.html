@@ -50,7 +50,6 @@
 
     <button style="margin-left:10px;" id="clearPg" onclick="clearPg();">Clear Page</button>
     <!-- a container for the output -->
-    <button style="margin-left:50%; border-radius:10px;" onclick="getIframe()"> (;´༎ຶД༎ຶ`)</button>
     <div id="output">
         <div id="intro"></div>
     </div>
@@ -62,21 +61,6 @@
 </div>
 <!--<script src="../../2011/11/pdftotext/jQuery-1.7.js"></script>-->
 <script type="text/javascript">
-    function getIframe() {
-        var iFrame = document.getElementById('input');
-        console.log("iFrame is: " + iFrame);
-        console.log("iFrame elementCN is: " + iFrame.classList);
-//        console.log("iFrame contentWindow is : " + iFrame.contentWindow.document.value);
-//        var iPageNum = iFrame.contentWindow.document.getElementById('pageNumber');
-//        alert("Current Page Number: " + iPageNum);
-
-        var iFrameJq = $("#input").contents().find("pageNumber").html();
-        console.log("iFrameJq is: " + iFrameJq);
-        console.log("iFrameJq contentWindow is : " + iFrameJq.contentWindow.document);
-//        alert("jQuery Page Number:  " + iFrameJq)
-
-
-    }
 
     function clearPg(){
 

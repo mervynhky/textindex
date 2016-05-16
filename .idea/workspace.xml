@@ -27,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pdftotext/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.5892856">
-              <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.7049442">
+              <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -43,8 +43,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pdftotext/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.8">
-              <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+            <state vertical-scroll-proportion="-3.4">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -53,24 +53,33 @@
       <file leaf-file-name="pdf.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pdftotext/pdf.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.1956522">
-              <caret line="1113" column="25" selection-start-line="1113" selection-start-column="6" selection-end-line="1113" selection-end-column="25" />
+            <state vertical-scroll-proportion="-3.3387096">
+              <caret line="321" column="72" selection-start-line="321" selection-start-column="72" selection-end-line="321" selection-end-column="72" />
               <folding>
-                <marker date="1463123159545" expanded="true" signature="701631:701643" placeholder="..." />
-                <marker date="1463123159545" expanded="true" signature="703275:703307" placeholder="..." />
+                <marker date="1463363313360" expanded="true" signature="701631:701643" placeholder="..." />
+                <marker date="1463363313360" expanded="true" signature="703275:703307" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pdf.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2011/11/pdftotext/pdf.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.833333">
+              <caret line="638" column="39" selection-start-line="638" selection-start-column="39" selection-end-line="638" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pdftotext/example/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6555024">
-              <caret line="103" column="21" selection-start-line="103" selection-start-column="19" selection-end-line="103" selection-end-column="21" />
+            <state vertical-scroll-proportion="-8.5">
+              <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,10 +119,10 @@
         <option value="$PROJECT_DIR$/simpleptt/index.htm" />
         <option value="$PROJECT_DIR$/simpleptt/test.js" />
         <option value="$PROJECT_DIR$/2011/11/pdftotext/app.js" />
-        <option value="$PROJECT_DIR$/pdftotext/example/index.html" />
         <option value="$PROJECT_DIR$/pdftotext/pdf.js" />
-        <option value="$PROJECT_DIR$/pdftotext/index.html" />
         <option value="$PROJECT_DIR$/pdftotext/app.js" />
+        <option value="$PROJECT_DIR$/pdftotext/example/index.html" />
+        <option value="$PROJECT_DIR$/pdftotext/index.html" />
       </list>
     </option>
   </component>
@@ -157,6 +166,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -257,9 +269,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -756,11 +765,12 @@
       <workItem from="1462931191173" duration="26060000" />
       <workItem from="1463018597677" duration="26216000" />
       <workItem from="1463104336752" duration="19489000" />
+      <workItem from="1463363324457" duration="6972000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="211914000" />
+    <option name="totallyTimeSpent" value="218886000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -773,7 +783,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17864923" sideWeight="0.49786323" order="0" side_tool="false" content_ui="tabs" />
@@ -784,7 +794,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23202614" sideWeight="0.4775641" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1917735" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1917735" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -835,13 +845,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/2011/11/pdftotext/example/lib/annotator.plugin.tags.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/2011/11/pdftotext/example/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1160,7 +1163,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.026397515">
           <caret line="726" column="6" selection-start-line="726" selection-start-column="6" selection-end-line="726" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1207,25 +1209,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2011/11/pdftotext/pdf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.01983664">
-          <caret line="16516" column="27" selection-start-line="16516" selection-start-column="27" selection-end-line="16516" selection-end-column="27" />
-          <folding>
-            <marker date="1462948856455" expanded="true" signature="807753:807765" placeholder="..." />
-            <marker date="1462948856455" expanded="true" signature="809597:809629" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2011/11/pdftotext/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="72" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3478261">
@@ -1234,43 +1217,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pdftotext/index.html">
+    <entry file="file://$PROJECT_DIR$/2011/11/pdftotext/pdf.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5892856">
-          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-9.833333">
+          <caret line="638" column="39" selection-start-line="638" selection-start-column="39" selection-end-line="638" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pdftotext/pdf.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.1956522">
-          <caret line="1113" column="25" selection-start-line="1113" selection-start-column="6" selection-end-line="1113" selection-end-column="25" />
+        <state vertical-scroll-proportion="-3.3387096">
+          <caret line="321" column="72" selection-start-line="321" selection-start-column="72" selection-end-line="321" selection-end-column="72" />
           <folding>
-            <marker date="1463123159545" expanded="true" signature="701631:701643" placeholder="..." />
-            <marker date="1463123159545" expanded="true" signature="703275:703307" placeholder="..." />
+            <marker date="1463363313360" expanded="true" signature="701631:701643" placeholder="..." />
+            <marker date="1463363313360" expanded="true" signature="703275:703307" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pdftotext/app.js">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.8">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.34762633">
+          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pdftotext/example/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6555024">
-          <caret line="103" column="21" selection-start-line="103" selection-start-column="19" selection-end-line="103" selection-end-column="21" />
+        <state vertical-scroll-proportion="-8.5">
+          <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
           <folding>
             <element signature="n#style#0;n#button#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2011/11/pdftotext/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13016845">
+          <caret line="5" column="51" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdftotext/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdftotext/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7049442">
+          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

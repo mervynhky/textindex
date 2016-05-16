@@ -20,15 +20,15 @@
 <script>PDFJS.workerSrc = document.getElementById("pdf-js").getAttribute("src");</script>
 <script src="app.js"></script>
 <script>
-    var app = new App(1);
-    var value = 1;
+    var app = new App();
+    var value = 0;
 
     function nextPg() {
-
         value = isNaN(value) ? 0 : value;
         value++;
         console.log("The value is " + value);
-        app = new Apple(value);
+        app.reset();
+        app.renderPage(value);
     }
 
     function previousPg() {
@@ -37,7 +37,8 @@
             value--;
         }
         console.log("The value is " + value);
-        app = new Apple(value);
+        app.reset();
+        app.renderPage(value);
     }
 
 </script>
