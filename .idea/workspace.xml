@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40959c2b-3799-42ab-9401-5e8c64f7c241" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pdftotext/example/index.html" afterPath="$PROJECT_DIR$/pdftotext/example/index.html" />
-    </list>
+    <list default="true" id="40959c2b-3799-42ab-9401-5e8c64f7c241" name="Default" comment="" />
     <ignored path="PDFtoText.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -50,8 +48,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pdftotext/example/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.25330812">
-              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.8071834">
+              <caret line="91" column="13" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
               <folding>
                 <element signature="n#style#0;n#button#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -739,12 +737,12 @@
       <workItem from="1462931191173" duration="26060000" />
       <workItem from="1463018597677" duration="26216000" />
       <workItem from="1463104336752" duration="19489000" />
-      <workItem from="1463363324457" duration="10019000" />
+      <workItem from="1463363324457" duration="10170000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="221933000" />
+    <option name="totallyTimeSpent" value="222084000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1219,8 +1217,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pdftotext/example/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.25330812">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.8071834">
+          <caret line="91" column="13" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
           <folding>
             <element signature="n#style#0;n#button#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
