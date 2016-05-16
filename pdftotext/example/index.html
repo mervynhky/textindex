@@ -2,6 +2,12 @@
 <head>
     <meta charset="utf-8">
     <title>Converting PDF To Text using pdf.js</title>
+    <link rel="stylesheet" type="text/css" href="assets/reset.css" />
+    <link rel="stylesheet" type="text/css" href="assets/styles.css" />
+    <link rel="stylesheet" type="text/css" href="assets/github.css" />
+    <link rel="stylesheet" type="text/css" href="assets/ColorPicker.css" />
+    <script type="text/javascript" src="assets/rainbow-custom.min.js"></script>
+    <script type="text/javascript" src="assets/ColorPicker.js"></script>
     <script src="../../2011/11/pdftotext/jQuery-1.7.js"></script>
     <style>
         html, body {
@@ -48,6 +54,9 @@
     <!-- embed the pdftotext web app as an iframe -->
     <iframe id="processor" src="../"></iframe>
 
+    Change highlighting color: <div class="color-picker"></div>
+    Remove all highlights: <button id="remove">Remove</button>
+
     <button style="margin-left:10px;" id="clearPg" onclick="clearPg();">Clear Page</button>
     <!-- a container for the output -->
     <div id="output">
@@ -60,14 +69,30 @@
     <iframe id="input" src="journal.pone.0026738.pdf"></iframe>
 </div>
 <!--<script src="../../2011/11/pdftotext/jQuery-1.7.js"></script>-->
+<script src="TextHighlighter.min.js"></script>
 <script type="text/javascript">
 
     function clearPg(){
-
         var jqDiv = document.getElementById("output");
         jqDiv.innerHTML = "";
         jqDiv.textContent = "";
     }
+
+
+    (function () {
+        var removeBtn = document.getElementById('remove');
+        var sandbox = document.getElementById('output');
+        var colors = new ColorPicker(document.querySelector('.color-picker'));
+        var hltr = new TextHighlighter(sandbox);
+
+        colors.onColorChange(function (color) {
+            hltr.setColor(color);
+        });
+
+        removeBtn.addEventListener('click', function () {
+            hltr.removeHighlights();
+        });
+    })();
 
 </script>
 <script>
