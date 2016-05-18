@@ -11,11 +11,34 @@
   <div id="message">Loading...</div>
   <div id="viewer" style="display:none"></div>
 
+  <button id="previousPg" onclick="previousPg()">Previous Page</button>
+  <button id="nextPg" onclick="nextPg();">Next Page</button>
   <script id="pdf-js" src="pdf.js"></script>
   <script>PDFJS.workerSrc = document.getElementById("pdf-js").getAttribute("src");</script>
 
   <script src="app.js"></script>
-  <script>var app = new App;</script>
+  <script>
+    var app = new App();
+    var value = 0;
+
+    function nextPg() {
+      value = isNaN(value) ? 0 : value;
+      value++;
+      console.log("The value is " + value);
+      app.reset();
+      app.renderPage(value);
+    }
+
+    function previousPg() {
+
+      if (!value <= 0) {
+        value--;
+      }
+      console.log("The value is " + value);
+      app.reset();
+      app.renderPage(value);
+    }
+  </script>
 </body>
 
 </html>
